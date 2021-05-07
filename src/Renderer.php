@@ -177,6 +177,7 @@ class Renderer
             $attrs = '';
             if (isset($item['attrs'])) {
                 foreach ($item['attrs'] as $attribute => $value) {
+                    $value = is_array($value) ? $value[0] : $value;
                     $attrs .= " {$attribute}=\"{$value}\"";
                 }
             }
