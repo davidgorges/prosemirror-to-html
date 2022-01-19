@@ -8,6 +8,11 @@ class Heading extends Node
 
     public function tag()
     {
-        return "h{$this->node->attrs->level}";
+        return [
+            [
+                'tag' => "h{$this->node->attrs->level}",
+                'attrs' => ['class' => 'text-xl font-medium'],
+            ],
+        ];
     }
 }
